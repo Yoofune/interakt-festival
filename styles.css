@@ -137,7 +137,7 @@ p { margin: 0 0 18px; }
 .news-card:nth-child(1) { background: var(--blue); }
 .news-card:nth-child(2) { background: var(--pink); }
 .news-card:nth-child(3) { background: var(--green); }
-.news-card:hover, .archive-card:hover { box-shadow: 8px 8px 0 var(--ink); transform: translate(-4px, -4px); }
+.news-card:hover, .archive-card:hover { box-shadow: 8px 8px 0 var(--ink); transform: translate(-4px, -4px); cursor: pointer; }
 .news-card:hover::after, .archive-card:hover::after { transform: translate(4px, -4px); }
 .card-label { display: inline-block; padding: 2px 8px; background: var(--paper); font-size: 28px; font-weight: 600; text-transform: uppercase; }
 
@@ -184,12 +184,13 @@ a.partner-logo {
   border: 0;
   background: transparent;
   text-decoration: none;
+  overflow: hidden;
 }
 
 .partner-logo img {
   display: block;
-  max-width: 240px;
-  max-height: 76px;
+  max-width: 95%;
+  max-height: 95%;
   object-fit: contain;
 }
 
@@ -218,7 +219,7 @@ a.partner-logo {
   .card-label { font-size: 24px; }
   .archive-grid { grid-template-columns: 1fr; }
   .archive-card { min-height: 180px; }
-  .partner-logo { width: calc(50% - 6px); }
+  .partner-logo { width: calc(50% - 10px); }
   .partner-logo, a.partner-logo { height: 92px; }
   .partner-logo img { max-height: 70px; }
 }
