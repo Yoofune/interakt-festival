@@ -178,7 +178,7 @@ p { margin: 0 0 18px; }
 a.partner-logo {
   display: grid;
   width: 260px;
-  height: 96px;
+  height: 160px;
   place-items: center;
   padding: 0;
   border: 0;
@@ -201,6 +201,87 @@ a.partner-logo {
 .skip-link { position: fixed; top: -100px; left: 16px; z-index: 100; background: var(--green); padding: 10px; }
 .skip-link:focus { top: 16px; }
 
+.artists-list {
+  display: grid;
+  gap: 46px;
+}
+
+.artist-card {
+  width: min(100%, 420px);
+  margin: 0 auto;
+  padding-bottom: 46px;
+  border-bottom: var(--line);
+}
+
+.artist-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  margin: 0 0 28px;
+  overflow: hidden;
+  background: var(--grey);
+}
+
+.artist-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.artist-name {
+  margin: 0 0 16px;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.artist-bio,
+.artist-achievements {
+  max-width: 640px;
+  margin: 0 0 18px;
+  text-align: left;
+}
+
+.artist-achievements {
+  margin-bottom: 0;
+}
+
+.artist-section-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 56px;
+}
+
+.artist-section-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 5px 12px;
+  background: var(--grey);
+  color: var(--ink);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color .18s ease, transform .18s ease;
+}
+
+.artist-section-nav a:hover, .artist-section-nav a:focus-visible { background: var(--hover-color); transform: translateY(-5px) rotate(-.5deg); outline: none; }
+
+.artist-section {
+  scroll-margin-top: 140px;
+  margin-bottom: 74px;
+}
+
+.artist-section > h2 {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
 @media (max-width: 650px) {
   .site-header { align-items: center; gap: 4px; padding: 12px; }
   .brand { width: min(185px, 48vw); }
@@ -222,6 +303,9 @@ a.partner-logo {
   .partner-logo { width: calc(50% - 10px); }
   .partner-logo, a.partner-logo { height: 92px; }
   .partner-logo img { max-height: 70px; }
+  .artist-section-nav { margin-bottom: 44px; }
+  .artist-section-nav a { min-height: 44px; font-size: 20px; }
+  .artist-section { scroll-margin-top: 100px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
