@@ -81,6 +81,7 @@ a { color: inherit; }
 .eyebrow, .section-label { margin: 0 0 12px; font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
 h1 { margin: 0 0 40px; font-size: clamp(42px, 5vw, 60px); font-weight: 600; line-height: .95; letter-spacing: -.04em; text-transform: uppercase; }
 h2 { margin: 0 0 16px; font-size: 28px; line-height: 1; font-weight: 600; }
+h3 { margin: 40px 0 40px; font-size: 28px; line-height: 1; font-weight: 600;}
 p { margin: 0 0 18px; }
 .lede { max-width: 630px; font-size: 22px; line-height: 1.2; }
 .body-copy { max-width: 640px; }
@@ -238,13 +239,15 @@ a.partner-logo {
 }
 
 .artist-bio,
-.artist-achievements {
+.artist-achievements,
+.artist-title {
   max-width: 640px;
   margin: 0 0 18px;
   text-align: left;
 }
 
 .artist-achievements {
+  gap: 10px;
   margin-bottom: 0;
 }
 
@@ -282,6 +285,36 @@ a.partner-logo {
   text-transform: uppercase;
 }
 
+.programme-details {
+  margin-top: 68px;
+}
+
+.programme-event {
+  margin-top: 46px;
+  padding-bottom: 28px;
+  border-bottom: var(--line);
+}
+
+.programme-title {
+  margin-bottom: 22px;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.programme-details a {
+  color: var(--ink);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.programme-details a:hover,
+.programme-details a:focus-visible {
+  color: var(--hover-color);
+  outline: none;
+}
+
 @media (max-width: 650px) {
   .site-header { align-items: center; gap: 4px; padding: 12px; }
   .brand { width: min(185px, 48vw); }
@@ -306,6 +339,8 @@ a.partner-logo {
   .artist-section-nav { margin-bottom: 44px; }
   .artist-section-nav a { min-height: 44px; font-size: 20px; }
   .artist-section { scroll-margin-top: 100px; }
+  .programme-details { margin-top: 50px; }
+  .programme-event { margin-top: 36px; padding-bottom: 18px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
